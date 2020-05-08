@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initiral-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="Lora" rel="stylesheet">
+
+<script src="https://use.fontawesome.com/3be4a6a818.js"></script>
+	<!-- Ian Renaker-Jansen-->
+	<style type="text/css">
+	body{
+		font-family: 'Lora'
+	}
+	.border{
+			border-width:1px;
+			border-color: #000;
+		}
+		h3{
+			text-align: center;
+		}
+		.SOF{
+			text-align: center;
+			border-right: 40px;
+			border-color: #000;
+			padding:15px;
+		}
+		ul{
+			list-style: none
+		}
+		h4{
+			font-size: 22px;
+			text-align: center;
+		}
+		.row{
+			margin:2em;
+			padding:1em;
+		}
+		.col{
+			margin-left: 1em
+		}
+	<title>Donation</title>
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-light" style="background-color: #cfbfff; position:fixed;z-index:5000;width:100%; "> <!--- nav bar -->
+		<img src="missionsinmotionlogo.png" style="width:8em;">
+		<ul class="nav justify-content-right">
+			<li class ="nav-item">
+				<a class="nav-link" href="Homepage.html" style="color:#000;font-size: 18px"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+			</li>
+			<li class ="nav-item">
+				<a class="nav-link" href="about.html" style="color:#000;font-size: 18px""><i class="fa fa-question" aria-hidden="true"></i> About </a>
+			</li>
+			<li class ="nav-item">
+				<a class="nav-link" href="programs.html" style="color:#000;font-size: 18px""><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Programs </a>
+			</li>
+			<li class ="nav-item">
+				<a class="nav-link" href="ContactPage.html" style="color:#000;font-size: 18px""><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact  </a>
+			</li>
+			<li class ="nav-item">
+				<a class="nav-link" href="DonationP.html" style="color:#000;font-size: 18px""><i class="fa fa-money" aria-hidden="true"></i> Donate  </a>
+			</li>
+		</ul>
+</nav>
+<div style="width:100%;height:90px;"><!-- creating blank space where the nav bar can rest up top-->
+	</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-fluid">
+			<h4> Looking for Another Way to Donate?</h4>
+			<p><b>Checks: Please make checks out to "Missions in Motion"</b><br>
+				Send Checks to our local office: <br>
+				International Ministries<br>
+				4832 Business Center Way<br>
+				Cincinnati, Ohio 45246</p>
+			</p>
+		</div>
+		<div class="col">
+			<h4>All Donations to Missions In Motion are Tax-Deductible.</h4>
+			<p style="text-align: center;">For your convenience, you can make one-time or recurring donations online by clicking the PayPal button. Your donation to Missions In Motion will help make a POSITIVE IMPACT in the lives of others, across the street and around the world!</p>
+		</div>
+	</div>
+		<div class="row">
+			<div class="col" style="margin-left:15%;" >
+				<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '1'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
